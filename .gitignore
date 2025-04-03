@@ -1,0 +1,36 @@
+# temps
+bin/
+obj/
+
+# misc
+/dist
+.env
+
+# npm deps
+node_modules/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# VSCode dirs
+.vscode/
+
+# user files
+.vs/
+.idea/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# installers
+*.cab
+*.msi
+*.msm
+*.msp
+
+# ts
+*.js.map

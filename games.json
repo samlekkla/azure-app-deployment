@@ -1,0 +1,83 @@
+[
+  {
+    "Id": "1",
+    "Name": "The Legend of Zelda: Ocarina of Time",
+    "Price": 499,
+    "Description": "Ett episkt action-äventyr där du spelar som Link och måste stoppa den onda Ganondorf från att ta över Hyrule.",
+    "ReleaseYear": 1998,
+    "Genre": "Action-äventyr",
+    "Cover": "https://images.nintendolife.com/82f557404ec71/legend-of-zelda-ocarina-of-time-cover.cover_large.jpg"
+  },
+  {
+    "Id": "2",
+    "Name": "Super Mario 64",
+    "Price": 399,
+    "Description": "Mario ger sig ut på ett tredimensionellt plattformsäventyr för att rädda prinsessan Peach från Bowser.",
+    "ReleaseYear": 1996,
+    "Genre": "Plattform",
+    "Cover": "https://images.nintendolife.com/f3c8baaa710cd/super-mario-64-cover.cover_large.jpg"
+  },
+  {
+    "Id": "3",
+    "Name": "GoldenEye 007",
+    "Price": 349,
+    "Description": "En förstapersonsskjutare där du spelar som James Bond och kämpar mot fiender för att stoppa en global katastrof.",
+    "ReleaseYear": 1997,
+    "Genre": "FPS",
+    "Cover": "https://images.nintendolife.com/0becf36f5e461/goldeneye-007-cover.cover_large.jpg"
+  },
+  {
+    "Id": "4",
+    "Name": "Banjo-Kazooie",
+    "Price": 379,
+    "Description": "Ett charmigt plattformsäventyr där björnen Banjo och fågeln Kazooie måste rädda Banjos syster från häxan Gruntilda.",
+    "ReleaseYear": 1998,
+    "Genre": "Plattform",
+    "Cover": "https://images.nintendolife.com/a5444f864a550/banjo-kazooie-cover.cover_large.jpg"
+  },
+  {
+    "Id": "5",
+    "Name": "Mario Kart 64",
+    "Price": 429,
+    "Description": "Ett klassiskt racingspel där du tävlar mot vänner eller datorstyrda motståndare på ikoniska Mario-banor.",
+    "ReleaseYear": 1996,
+    "Genre": "Racing",
+    "Cover": "https://images.nintendolife.com/5830510298ea5/mario-kart-64-cover.cover_large.jpg"
+  },
+  {
+    "Id": "6",
+    "Name": "Donkey Kong 64",
+    "Price": 389,
+    "Description": "Donkey Kong och hans vänner måste rädda deras ö från den onda King K. Rool i detta storskaliga 3D-plattformsäventyr.",
+    "ReleaseYear": 1999,
+    "Genre": "Plattform",
+    "Cover": "https://images.nintendolife.com/b909aa55cd9fa/donkey-kong-64-cover.cover_large.jpg"
+  },
+  {
+    "Id": "7",
+    "Name": "Super Smash Bros.",
+    "Price": 359,
+    "Cover": "https://images.nintendolife.com/f1e39e20e92de/super-smash-bros-cover.cover_large.jpg",
+    "Description": "Ett fightingspel där du kan spela som ikoniska Nintendo-karaktärer och slåss i olika arenor.",
+    "ReleaseYear": 1999,
+    "Genre": "Fighting"
+  },
+  {
+    "Id": "8",
+    "Name": "Perfect Dark",
+    "Price": 369,
+    "Cover": "https://images.nintendolife.com/15ba35b4bb6a4/perfect-dark-cover.cover_large.jpg",
+    "Description": "En futuristisk förstapersonsskjutare där agenten Joanna Dark bekämpar korruption och utomjordiska hot.",
+    "ReleaseYear": 2000,
+    "Genre": "FPS"
+  },
+  {
+    "Id": "9",
+    "Name": "Pokemon Stadium",
+    "Price": 449,
+    "Cover": "https://images.nintendolife.com/819928bb78614/pokemon-stadium-cover.cover_large.jpg",
+    "Description": "Ett strategiskt turbaserat fightingspel där du kan tävla med dina Pokémon i episka 3D-strider.",
+    "ReleaseYear": 1999,
+    "Genre": "Strategi/Fighting"
+  }
+]
