@@ -79,5 +79,50 @@
     "Description": "Ett strategiskt turbaserat fightingspel där du kan tävla med dina Pokémon i episka 3D-strider.",
     "ReleaseYear": 1999,
     "Genre": "Strategi/Fighting"
+  },
+  {
+    "Id": "10",
+    "Name": "The Legend of Zelda: Majora's Mask",
+    "Price": 499,
+    "Cover": "https://images.nintendolife.com/6c2a75a4be6a2/legend-of-zelda-majoras-mask-cover.cover_large.jpg",
+    "Description": "En mörk och mystisk uppföljare till Ocarina of Time där Link måste rädda en värld som går under om tre dagar.",
+    "ReleaseYear": 2000,
+    "Genre": "Action-äventyr"
+  },
+  {
+    "Id": "11",
+    "Name": "Wave Race 64",
+    "Price": 329,
+    "Cover": "https://images.nintendolife.com/060163558b4c5/wave-race-64-cover.cover_large.jpg",
+    "Description": "Ett vattenskoter-racingspel med realistisk fysik och spännande banor.",
+    "ReleaseYear": 1996,
+    "Genre": "Racing"
+  },
+  {
+    "Id": "12",
+    "Name": "Star Fox 64",
+    "Price": 389,
+    "Cover": "https://images.nintendolife.com/00fe246e64f5e/star-fox-64-cover.cover_large.jpg",
+    "Description": "Ett rymdskjutspel där du styr Fox McCloud och hans team genom actionfyllda uppdrag.",
+    "ReleaseYear": 1997,
+    "Genre": "Shoot 'em up"
+  },
+  {
+    "Id": "13",
+    "Name": "Star Wars Episode I: Racer",
+    "Price": 349,
+    "Cover": "https://images.nintendolife.com/a8bf5c53203d5/star-wars-episode-i-racer-cover.cover_large.jpg",
+    "Description": "Ett futuristiskt racingspel med höga hastigheter och adrenalinfylld action.",
+    "ReleaseYear": 1998,
+    "Genre": "Racing"
+  },
+  {
+    "Id": "14",
+    "Name": "Yoshi's Story",
+    "Price": 299,
+    "Cover": "https://images.nintendolife.com/4b5ee2ec1d641/yoshis-story-cover.cover_large.jpg",
+    "Description": "Ett charmigt plattformsspel där Yoshi måste rädda sitt rike genom att samla Happy Fruits.",
+    "ReleaseYear": 1997,
+    "Genre": "Plattform"
   }
 ]
