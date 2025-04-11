@@ -2,6 +2,8 @@ using GameStore.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:InstrumentationKey"]);
+
 // Lägg till tjänster för MVC och GameService
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<GameService>();
