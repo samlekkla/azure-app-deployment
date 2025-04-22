@@ -4,8 +4,6 @@ using GameStore.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri")!);
-builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredential());
 
 builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:InstrumentationKey"]);
 
@@ -13,12 +11,9 @@ builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["Applicat
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<GameService>();
 
-// Konfigurera Key Vault
-builder.Services.AddSingleton<SecretClient>(sp =>
-{
-    var keyVaultUrl = builder.Configuration["KeyVault:VaultUrl"];
-    return new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
-});
+
+//var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri")!);
+builder.Configuration.AddAzureKeyVault(new Uri("https://myappkeyvault.vault.azure.net/"), new DefaultAzureCredential());
 
 var app = builder.Build();
 
