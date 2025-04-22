@@ -5,20 +5,20 @@ using System.Collections.Generic;
 
 namespace GameStore.Controllers
 {
-  public class GamesController : Controller
-  {
-    private readonly GameService _gameService;
-
-    public GamesController(GameService gameService)
+    public class GamesController : Controller
     {
-      _gameService = gameService;
-    }
+        private readonly GameService _gameService;
 
-    // GET: Games
-    public IActionResult Index()
-    {
-      var games = _gameService.GetAllGames();
-      return View(games);  // Rendera listan pÃ¥ en vy
+        public GamesController(GameService gameService)
+        {
+            _gameService = gameService;
+        }
+
+        // GET: Games
+        public IActionResult Index()
+        {
+            var games = _gameService.GetAllGames();
+            return View(games);  // Rendera listan på en vy
+        }
     }
-  }
 }

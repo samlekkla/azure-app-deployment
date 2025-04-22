@@ -4,84 +4,84 @@
 <html lang="sv">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spel</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div class="container mt-5">
-    <h1 class="text-center mb-5">VÃ¥ra N64 spel</h1>
-    <div class="row">
-      @foreach (var game in Model)
-      {
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="@game.Cover" class="card-img-top" alt="@game.Name">
-            <div class="card-body">
-              <h5 class="card-title">@game.Name</h5>
-              <p class="card-text">@game.Description</p>
-              <p class="card-text"><strong>Pris:</strong> @game.Price SEK</p>
-              <p class="card-text"><strong>Genre:</strong> @game.Genre</p>
-              <p class="card-text"><strong>UtgivningsÃ¥r:</strong> @game.ReleaseYear</p>
-              <!-- KÃ¶p knapp -->
-              <button class="btn btn-success add-to-cart" data-game-id="@game.Id" data-game-name="@game.Name">
-                KÃ¶p
-              </button>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Våra N64 spel</h1>
+        <div class="row">
+            @foreach (var game in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="@game.Cover" class="card-img-top" alt="@game.Name">
+                        <div class="card-body">
+                            <h5 class="card-title">@game.Name</h5>
+                            <p class="card-text">@game.Description</p>
+                            <p class="card-text"><strong>Pris:</strong> @game.Price SEK</p>
+                            <p class="card-text"><strong>Genre:</strong> @game.Genre</p>
+                            <p class="card-text"><strong>Utgivningsår:</strong> @game.ReleaseYear</p>
+                            <!-- Köp knapp -->
+                            <button class="btn btn-success add-to-cart" data-game-id="@game.Id" data-game-name="@game.Name">
+                                Köp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Varukorg</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="cartModalMessage">Spelet har lagts till i varukorgen.</p>
+                    <p><strong>Antal varor i varukorgen:</strong> <span id="cartModalCount">0</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
+                    <button type="button" class="btn btn-primary" disabled>Till kassan</button>
+                </div>
             </div>
-          </div>
         </div>
-      }
     </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Varukorg</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p id="cartModalMessage">Spelet har lagts till i varukorgen.</p>
-          <p><strong>Antal varor i varukorgen:</strong> <span id="cartModalCount">0</span></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">StÃ¤ng</button>
-          <button type="button" class="btn btn-primary" disabled>Till kassan</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let cartCount = 0
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script>
-    let cartCount = 0
+        const addToCartButtons = document.querySelectorAll('.add-to-cart')
 
-    const addToCartButtons = document.querySelectorAll('.add-to-cart')
+        addToCartButtons.forEach(button => {
+          button.addEventListener('click', function () {
+            cartCount++
 
-    addToCartButtons.forEach(button => {
-      button.addEventListener('click', function () {
-        cartCount++
+            const cartBadge = document.getElementById('cart-badge')
+            cartBadge.textContent = cartCount
 
-        const cartBadge = document.getElementById('cart-badge')
-        cartBadge.textContent = cartCount
+            const cartModalMessage = document.getElementById('cartModalMessage')
+            cartModalMessage.textContent = `Spelet "${this.dataset.gameName}" har lagts till i varukorgen!`
 
-        const cartModalMessage = document.getElementById('cartModalMessage')
-        cartModalMessage.textContent = `Spelet "${this.dataset.gameName}" har lagts till i varukorgen!`
+            const cartModalCount = document.getElementById('cartModalCount')
+            cartModalCount.textContent = cartCount
 
-        const cartModalCount = document.getElementById('cartModalCount')
-        cartModalCount.textContent = cartCount
-
-        const cartModal = new bootstrap.Modal(document.getElementById('cartModal'))
-        cartModal.show()
-      })
-    })
+            const cartModal = new bootstrap.Modal(document.getElementById('cartModal'))
+            cartModal.show()
+          })
+        })
 
 
-  </script>
+    </script>
 </body>
 
 </html>
