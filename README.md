@@ -95,9 +95,9 @@ Detta gör att jag inte behöver lagra hemligheter i min kod eller i konfigurati
 - Jag integrerade Key Vault i `Program.cs`, så att applikationen kunde hämta secrets automatiskt.
 - Jag testade integrationen genom att skapa ett enkelt API som läste ett värde från Key Vault och verifierade att allt fungerade korrekt.
 
-(assets/keyvaultinj.PNG)
-(assets/keyvaultendpoint.PNG)
-(assets/api.PNG)
+![Keyvault Injection](assets/keyvaultinj.PNG)
+![Keyvault Endpoint](assets/keyvaultendpoint.PNG)
+![API](assets/api.PNG)
 
 ---
 
