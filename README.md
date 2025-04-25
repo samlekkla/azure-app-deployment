@@ -93,13 +93,11 @@ Detta gör att jag inte behöver lagra hemligheter i min kod eller i konfigurati
 - Jag installerade nödvändiga NuGet-paket för att koppla Key Vault till .NET-konfigurationen.
 (assets/application-insights.png)
 - Jag integrerade Key Vault i `Program.cs`, så att applikationen kunde hämta secrets automatiskt.
+- Jag testade integrationen genom att skapa ett enkelt API som läste ett värde från Key Vault och verifierade att allt fungerade korrekt.
 
 (assets/keyvaultinj.PNG)
 (assets/keyvaultendpoint.PNG)
-
-- Jag testade integrationen genom att skapa ett enkelt API som läste ett värde från Key Vault och verifierade att allt fungerade korrekt.
-
-(assets/api.png)
+(assets/api.PNG)
 
 ---
 
