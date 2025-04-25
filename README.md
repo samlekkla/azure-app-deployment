@@ -114,6 +114,8 @@ När jag försökte köra min pipeline fick jag detta felmeddelande:
 ##[error]No hosted parallelism has been purchased or granted. To request a free parallelism grant, 
 please fill out the following form https://aka.ms/azpipelines-parallelism-request
 
+![azure](assets/azure.PNG)
+
 
 Jag fyllde i Microsofts formulär för att ansöka om **gratis hosted parallelism** – vilket krävs för att kunna använda deras byggservrar (build agents).  
 Trots att det gått över **7 dagar** har jag **inte fått något svar** från Microsoft, och kan därför inte demonstrera detta i praktiken.
